@@ -1,12 +1,15 @@
 class Solution {
     public long solution(long n) {
         long answer = (long) Math.sqrt(n);
-        
-        if(answer * answer == n)
-        {
-            return (answer+1) * (answer+1);
+        long x = 1;
+
+        while (x * x < n) {
+            x++;
         }
-        else {
+
+        if (x * x == n) {
+            return (x + 1) * (x + 1);
+        } else {
             return -1;
         }
     }
